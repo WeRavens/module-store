@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body.dark{
+      background: black;
+      transition: background 0.3s ease-in-out;
+      color: white;
+    }
+    body{
+      background: white;
+      animation: backchange 0.3s linear ease-in-out;
+      transition: background 0.3s ease-in-out;
+    }
+    @keyframes backchange{
+      0%{
+        background: black;
+      }
+      100%{
+        background: rgb(255, 217, 0);
+      }
+    }
+    #first{
+      position: absolute;
+      top: 100px;
+    }
+    
+  </style>
+</head>
+<body class="w-full min-h-screen justify-center flex items-center">
+  
+    <button id="first" class="text-black px-9 rounded-3xl ring-2 ring-black py-3 bg-white hover:bg-black hover:text-white transition-all ease-in-out duration-[500ms] hover:scale-95 active:scale-95 focus:ring-2 focus:ring-white focus:bg-black focus:text-white :bg-black active:ring-2 active:ring-black" onclick="change()">CREATE</button>
+
+
+
+<ul>
+  <li class="first:text-red-500 last:text-blue-500 odd:bg-gray-500 even:bg-white">Item 1</li>
+  <li class="first:text-red-500 last:text-blue-500 odd:bg-gray-500 even:bg-white">Item 2</li>
+  <li class="first:text-red-500 last:text-blue-500 odd:bg-gray-500 even:bg-white">Item 3</li>
+  <li class="first:text-red-500 last:text-blue-500 odd:bg-gray-100 even:bg-white">Item 4</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    function change(){
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
+</body>
+</html>
