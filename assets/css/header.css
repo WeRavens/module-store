@@ -36,9 +36,9 @@ nav a{
     text-decoration: none;
     display: inline-block;
     padding: 7px;
-    border-top: white 1px solid ;
-    border-bottom: white 1px solid ;
-    background: rgb(0, 0, 0);
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    border-top: 0.1rem white solid;
 }
 nav a:hover{
     background: white;
@@ -47,13 +47,16 @@ nav a:hover{
 .navbar{
     display: none;
 }
-.navbar.active .btn-navv{
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding: 15px;
-    font-size: 1.3rem;
-    background: none;color: rgb(255, 255, 255);
+.btn-navv{
+    display: none;
+}
+.navbar.active ~ .btn-navv{
+    font-size: 1rem;
+    display: inline-block;
+    z-index: 3;
+    position: absolute;
+    background: none;
+    color: rgb(251, 255, 0);
 }
 .navbar.active .btn-nav{
     position: relative;
@@ -62,14 +65,15 @@ nav a:hover{
 .navbar.active{
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: start;align-items: center;
     position: fixed;
     top: 0;
     text-align: center;
-    background: black;
+    background: linear-gradient(to bottom,rgb(58, 58, 58),rgb(0, 0, 0));
     right: 0%;
-    width: 45%;
+    width: 50%;
     min-height: 100vh;
+    z-index: 1;
 }
 #btn-nav{
     position: relative;
@@ -81,7 +85,7 @@ nav a:hover{
 }
 .s1{
     display: inline-block;
-    background: linear-gradient(360deg,rgb(0, 255, 221),rgb(255, 145, 0));
+    background: linear-gradient(260deg,rgb(0, 255, 221),rgb(255, 145, 0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -90,7 +94,7 @@ nav a:hover{
     background-size: 600% 600%;
     animation: bg-change 8s ease-in-out infinite;
 }
-@keyframes bg-change {
+@keyframes bg-cheange {
     0%{
         background-position: 0% 50%;
     }
@@ -101,6 +105,25 @@ nav a:hover{
         background-position: 0% 50%;
     }
 }
+.search{
+    border-radius: 45px;
+    padding: 0.35rem;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    max-width: 85%;
+}
+.search:focus{
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
 
 
 
